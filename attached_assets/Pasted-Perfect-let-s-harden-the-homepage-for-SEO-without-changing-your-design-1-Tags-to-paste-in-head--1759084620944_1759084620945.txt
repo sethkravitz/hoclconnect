@@ -1,0 +1,128 @@
+Perfect—let’s harden the homepage for SEO without changing your design.
+
+1) Tags to paste in <head>
+
+Title + Meta
+
+<title>HOCl Manufacturers (Bulk & Private Label) | HOCl Connect</title>
+<meta name="description" content="Get matched with vetted hypochlorous acid (HOCl) manufacturers in the U.S. Choose bulk liquid or private label. Free matching, usually 1–3 business days." />
+<link rel="canonical" href="https://hoclconnect.com/" />
+
+
+Open Graph / Twitter
+
+<meta property="og:title" content="Find Vetted HOCl Manufacturers | HOCl Connect" />
+<meta property="og:description" content="We match you with verified hypochlorous acid suppliers for bulk or private label. Free, fast introductions." />
+<meta property="og:url" content="https://hoclconnect.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://hoclconnect.com/og/home.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+
+
+Organization + WebSite schema
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"HOCl Connect",
+  "url":"https://hoclconnect.com",
+  "logo":"https://hoclconnect.com/logo.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "url":"https://hoclconnect.com",
+  "name":"HOCl Connect",
+  "potentialAction":{
+    "@type":"SearchAction",
+    "target":"https://hoclconnect.com/search?q={query}",
+    "query-input":"required name=query"
+  }
+}
+</script>
+
+
+FAQ schema (matches your on-page FAQ)
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"FAQPage",
+ "mainEntity":[
+  {"@type":"Question","name":"Do you manufacture or sell HOCl?",
+   "acceptedAnswer":{"@type":"Answer","text":"No. We are a free matching service that connects you to vetted HOCl manufacturers and private-label partners."}},
+  {"@type":"Question","name":"What does it cost?",
+   "acceptedAnswer":{"@type":"Answer","text":"The service is free to buyers. We’re compensated by partners we refer when applicable."}},
+  {"@type":"Question","name":"How fast do I get introductions?",
+   "acceptedAnswer":{"@type":"Answer","text":"Usually within 1–3 business days after you submit your requirements."}},
+  {"@type":"Question","name":"What if I’m not sure about technical details?",
+   "acceptedAnswer":{"@type":"Answer","text":"No problem—share your use case, rough volumes, and timeline. We help translate that into manufacturer specs."}},
+  {"@type":"Question","name":"What industries do you serve?",
+   "acceptedAnswer":{"@type":"Answer","text":"Common use cases include jan-san, food service, healthcare, pet, and consumer skin-safe applications. We’ll route you accordingly."}}
+ ]
+}
+</script>
+
+2) On-page SEO (keep visuals, add one accessible H1)
+
+Your hero headline is great for conversion. Add a lightweight, visually hidden H1 so we capture the primary keyword without touching the layout:
+
+<h1 class="sr-only">Find vetted hypochlorous acid (HOCl) manufacturers — bulk supply & private label</h1>
+
+
+(Ensure .sr-only uses standard screen-reader utility: absolute clipped, 1px, etc.)
+
+Internal links above the fold
+
+“Get Bulk HOCl Liquid” → /bulk-hocl/
+
+“Launch My Own HOCl Product” → /private-label-hocl/
+
+Hero image/icon alt text
+
+If decorative, alt="" role="presentation".
+
+If not decorative, e.g., partner icons, give meaningful alt like alt="Vetted HOCl partners".
+
+3) Copy micro-tweaks (fast edits)
+
+Subhead (add the key term once):
+“Whether you need hypochlorous acid (HOCl) bulk liquid or want to launch a private label product, we connect you to vetted partners.”
+
+The small line under the orange CTA: include benefit + speed + clarity:
+“Free matching • Usually 1–3 business days • We don’t manufacture HOCl.”
+
+4) Navigation & footer links (minimal, helpful)
+
+Header: Get Bulk HOCl · Private Label · How It Works · FAQ · Contact
+
+Footer: repeat those + Privacy and Sitemap link to /sitemap.xml.
+
+5) Form basics (conversion + data quality)
+
+Use the same short form in the hero and lower CTA:
+
+Name, Work Email, Company, Need: Bulk or Private-Label (radio), Monthly Volume band, Timeline.
+
+Add hidden fields for utm_source, utm_medium, utm_campaign, utm_content.
+
+Confirmation message: “Thanks—expect 1–3 introductions by email within 1–3 business days.”
+
+6) Performance quick wins (single commit)
+
+Convert hero/backgrounds to WebP/AVIF, preload the largest one.
+
+rel="preconnect" to your font host; set font-display: swap.
+
+Lazy-load all non-hero images: <img loading="lazy" …>
+
+Minify CSS/JS; ensure no render-blocking 3rd-party scripts above the fold.
+
+7) Indexing & tracking (homepage only for now)
+
+Ensure homepage is not blocked; submit https://hoclconnect.com/ in GSC URL Inspection.
+
+GA4: mark lead_form_submit as a conversion.
