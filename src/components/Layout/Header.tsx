@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, Droplets } from 'lucide-react'
 import { trackEvent } from '../../lib/analytics'
@@ -138,9 +138,11 @@ const Header = () => {
               ))}
               <Link
                 to="/quote"
-                onClick={() => handleCTAClick('Get Started Free', '/quote')}
+                onClick={() => {
+                  handleCTAClick('Get Started Free', '/quote');
+                  setIsMenuOpen(false);
+                }}
                 className="block mx-3 mt-4 bg-orange-500 text-white px-4 py-2 rounded-lg text-base font-medium hover:bg-orange-600 transition-colors text-center"
-                onClick={() => setIsMenuOpen(false)}
               >
                 Get Started Free
               </Link>
