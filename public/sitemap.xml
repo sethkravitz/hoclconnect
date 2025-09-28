@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Root Pages -->
+  <url>
+    <loc>https://hoclconnect.com/</loc>
+    <lastmod>2025-01-11</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://hoclconnect.com/quote</loc>
+    <lastmod>2025-01-11</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hoclconnect.com/faq</loc>
+    <lastmod>2025-01-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hoclconnect.com/about</loc>
+    <lastmod>2025-01-11</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hoclconnect.com/contact</loc>
+    <lastmod>2025-01-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Pillar Pages -->
+  <url>
+    <loc>https://hoclconnect.com/bulk-hocl</loc>
+    <lastmod>2025-01-11</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hoclconnect.com/private-label</loc>
+    <lastmod>2025-01-11</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hoclconnect.com/how-it-works</loc>
+    <lastmod>2025-01-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hoclconnect.com/private-label</loc>
+    <lastmod>2025-01-11</lastmod>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Container Pages -->
+  <url>
+    <loc>https://hoclconnect.com/containers/55-gallon-drum</loc>
+    <lastmod>2025-01-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hoclconnect.com/containers/275-gallon-tote</loc>
+    <lastmod>2025-01-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hoclconnect.com/containers/cases</loc>
+    <lastmod>2025-01-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Use Case Pages -->
+  <url>
+    <loc>https://hoclconnect.com/use-cases/janitorial</loc>
+    <lastmod>2025-01-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hoclconnect.com/use-cases/skincare</loc>
+    <lastmod>2025-01-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Guide Pages -->
+  <url>
+    <loc>https://hoclconnect.com/guides/bulk-buyers</loc>
+    <lastmod>2025-01-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hoclconnect.com/guides/private-label-playbook</loc>
+    <lastmod>2025-01-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Comparison Pages -->
+  <url>
+    <loc>https://hoclconnect.com/compare/tote-vs-drum</loc>
+    <lastmod>2025-01-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hoclconnect.com/compare/rtu-vs-concentrate</loc>
+    <lastmod>2025-01-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Location Pages -->
+  <url>
+    <loc>https://hoclconnect.com/locations/texas</loc>
+    <lastmod>2025-01-11</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hoclconnect.com/locations/california</loc>
+    <lastmod>2025-01-11</lastmod>
+    <priority>0.6</priority>
+  </url>
+</urlset>

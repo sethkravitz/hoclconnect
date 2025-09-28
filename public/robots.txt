@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://hoclconnect.com/sitemap.xml
+
+# Disallow admin areas (if any)
+Disallow: /admin/
