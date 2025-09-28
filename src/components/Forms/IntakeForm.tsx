@@ -373,7 +373,6 @@ const IntakeForm = () => {
           { id: 'clinical', title: 'Clinical', description: 'Healthcare, dental, medical facilities', icon: '🏥' },
           { id: 'other', title: 'Other', description: 'Tell us about your specific use case', icon: HelpCircle }
         ].map((option) => {
-          const Icon = typeof option.icon === 'string' ? () => <span className="text-2xl">{option.icon}</span> : option.icon
           return (
             <button
               key={option.id}
@@ -385,7 +384,13 @@ const IntakeForm = () => {
               }`}
             >
               <div className="flex items-start space-x-3">
-                <Icon className={`h-6 w-6 mt-1 ${formData.bulk_use_case === option.id ? 'text-blue-600' : 'text-gray-400'}`} />
+                <div className={`h-6 w-6 mt-1 flex items-center justify-center ${formData.bulk_use_case === option.id ? 'text-blue-600' : 'text-gray-400'}`}>
+                  {typeof option.icon === 'string' ? (
+                    <span className="text-2xl">{option.icon}</span>
+                  ) : (
+                    <option.icon className="h-6 w-6" />
+                  )}
+                </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">{option.title}</h3>
                   <p className="text-sm text-gray-600">{option.description}</p>
@@ -573,7 +578,6 @@ const IntakeForm = () => {
           { id: 'multi-surface', title: 'Multi-Surface Cleaner', description: 'All-purpose cleaning solutions', icon: Spray },
           { id: 'other', title: 'Other', description: 'Tell us about your product idea', icon: HelpCircle }
         ].map((option) => {
-          const Icon = typeof option.icon === 'string' ? () => <span className="text-2xl">{option.icon}</span> : option.icon
           return (
             <button
               key={option.id}
@@ -585,7 +589,13 @@ const IntakeForm = () => {
               }`}
             >
               <div className="flex items-start space-x-3">
-                <Icon className={`h-6 w-6 mt-1 ${formData.pl_product_type === option.id ? 'text-blue-600' : 'text-gray-400'}`} />
+                <div className={`h-6 w-6 mt-1 flex items-center justify-center ${formData.pl_product_type === option.id ? 'text-blue-600' : 'text-gray-400'}`}>
+                  {typeof option.icon === 'string' ? (
+                    <span className="text-2xl">{option.icon}</span>
+                  ) : (
+                    <option.icon className="h-6 w-6" />
+                  )}
+                </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">{option.title}</h3>
                   <p className="text-sm text-gray-600">{option.description}</p>
