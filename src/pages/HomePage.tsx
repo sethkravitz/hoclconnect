@@ -3,36 +3,74 @@ import { ArrowRight, Shield, Users, Clock, CheckCircle, Droplets, Building2, Bea
 import { trackEvent } from '../lib/analytics'
 import MetaTags from '../components/SEO/MetaTags'
 import FAQList from '../components/FAQ/FAQList'
-import { ORGANIZATION_SCHEMA } from '../constants/seo'
 
 const HomePage = () => {
-  const structuredData = {
+  // Optimized Organization Schema
+  const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "HOCl Connect",
-    "description": "B2B marketplace connecting buyers with vetted hypochlorous acid suppliers and private label manufacturers. We help you get started with your HOCl product.",
     "url": "https://hoclconnect.com",
-    "logo": "https://hoclconnect.com/logo.png",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-555-HOCL-123",
-      "contactType": "customer service",
-      "email": "hello@hoclconnect.com"
-    },
-    "serviceOffered": [
+    "logo": "https://hoclconnect.com/logo.png"
+  }
+
+  // WebSite Schema for search functionality
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://hoclconnect.com",
+    "name": "HOCl Connect",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://hoclconnect.com/search?q={query}",
+      "query-input": "required name=query"
+    }
+  }
+
+  // FAQ Schema matching on-page content
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
       {
-        "@type": "Service",
-        "name": "Get Bulk HOCl Liquid",
-        "description": "Connect businesses with vetted hypochlorous acid suppliers for bulk liquid purchases",
-        "price": "0",
-        "priceCurrency": "USD"
+        "@type": "Question",
+        "name": "Do you manufacture or sell HOCl?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. We are a free matching service that connects you to vetted HOCl manufacturers and private-label partners."
+        }
       },
       {
-        "@type": "Service",
-        "name": "Launch My Own HOCl Product",
-        "description": "Match with private label and contract manufacturers to launch your complete HOCl product",
-        "price": "0",
-        "priceCurrency": "USD"
+        "@type": "Question",
+        "name": "What does it cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The service is free to buyers. We're compensated by partners we refer when applicable."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How fast do I get introductions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Usually within 1–3 business days after you submit your requirements."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if I'm not sure about technical details?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No problem—share your use case, rough volumes, and timeline. We help translate that into manufacturer specs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What industries do you serve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Common use cases include jan-san, food service, healthcare, pet, and consumer skin-safe applications. We'll route you accordingly."
+        }
       }
     ]
   }
@@ -70,11 +108,15 @@ const HomePage = () => {
   return (
     <>
       <MetaTags
-        title="We Match You with the Right HOCl Partner | HOCl Connect"
-        description="Find suppliers, bottlers, and private-label pros for hypochlorous acid — free to buyers. We don't manufacture HOCl, we connect you with those who do."
-        keywords="hypochlorous acid, HOCl supplier, private label, bottling services, B2B marketplace, contract manufacturing"
-        structuredData={structuredData}
-        organizationSchema={ORGANIZATION_SCHEMA}
+        title="HOCl Manufacturers (Bulk & Private Label) | HOCl Connect"
+        description="Get matched with vetted hypochlorous acid (HOCl) manufacturers in the U.S. Choose bulk liquid or private label. Free matching, usually 1–3 business days."
+        canonical="https://hoclconnect.com/"
+        ogTitle="Find Vetted HOCl Manufacturers | HOCl Connect"
+        ogDescription="We match you with verified hypochlorous acid suppliers for bulk or private label. Free, fast introductions."
+        ogImage="https://hoclconnect.com/og/home.jpg"
+        organizationSchema={organizationSchema}
+        websiteSchema={websiteSchema}
+        faqSchema={faqSchema}
       />
 
       {/* Hero Section */}

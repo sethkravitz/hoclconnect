@@ -1,4 +1,3 @@
-import React from 'react'
 import { Helmet } from 'react-helmet-async'
 
 interface MetaTagsProps {
@@ -12,6 +11,8 @@ interface MetaTagsProps {
   ogType?: string
   structuredData?: object
   organizationSchema?: object
+  websiteSchema?: object
+  faqSchema?: object
 }
 
 const MetaTags = ({
@@ -24,7 +25,9 @@ const MetaTags = ({
   ogImage,
   ogType = 'website',
   structuredData,
-  organizationSchema
+  organizationSchema,
+  websiteSchema,
+  faqSchema
 }: MetaTagsProps) => {
   const fullTitle = title.includes('HOCl Connect') ? title : `${title} | HOCl Connect`
   const currentUrl = canonical || window.location.href
@@ -55,6 +58,16 @@ const MetaTags = ({
       {organizationSchema && (
         <script type="application/ld+json">
           {JSON.stringify(organizationSchema)}
+        </script>
+      )}
+      {websiteSchema && (
+        <script type="application/ld+json">
+          {JSON.stringify(websiteSchema)}
+        </script>
+      )}
+      {faqSchema && (
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
         </script>
       )}
       {structuredData && (
