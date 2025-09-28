@@ -28,11 +28,14 @@ import CaliforniaPage from './pages/locations/CaliforniaPage'
 import IntakeForm from './components/Forms/IntakeForm'
 import './index.css'
 
-// Component to handle route tracking
+// Component to handle route tracking and scroll restoration
 const RouteTracker = () => {
   const location = useLocation()
 
   React.useEffect(() => {
+    // Scroll to top on route change
+    window.scrollTo(0, 0)
+    
     // Track page views and categorize them
     const path = location.pathname
     
