@@ -119,6 +119,9 @@ const HomePage = () => {
         faqSchema={faqSchema}
       />
 
+      {/* Semantic H1 for SEO - visually hidden but accessible to screen readers */}
+      <h1 className="sr-only">Find vetted hypochlorous acid (HOCl) manufacturers</h1>
+
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -126,10 +129,10 @@ const HomePage = () => {
             <div className="flex justify-center mb-6">
               <Droplets className="h-16 w-16 text-blue-200" />
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               Launch Your HOCl Product:
               <span className="block text-blue-200">We Connect You to Expert Partners</span>
-            </h1>
+            </h2>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-blue-100 leading-relaxed">
               Whether you need bulk liquid or want to launch your own product line, we connect you with the right partners.
               <span className="block font-semibold text-white mt-2">Free matching service — usually 1-3 business days.</span>
