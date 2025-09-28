@@ -134,7 +134,7 @@ const HomePage = () => {
               <span className="block text-blue-200">We Connect You to Expert Partners</span>
             </h2>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-blue-100 leading-relaxed">
-              Whether you need bulk liquid or want to launch your own product line, we connect you with the right partners.
+              Whether you need bulk hypochlorous acid (HOCl) liquid or want to launch your own HOCl product line, we connect you with the right partners.
               <span className="block font-semibold text-white mt-2">Free matching service — usually 1-3 business days.</span>
             </p>
 
@@ -169,7 +169,7 @@ const HomePage = () => {
               <ArrowRight className="h-5 w-5" />
             </Link>
             <div className="text-blue-200 text-sm mt-4">
-              Free matching service • Usually 1-3 business days • We don't manufacture HOCl
+              Free to buyers • Usually 1-3 business days • We connect you with manufacturers; we don't make HOCl ourselves
             </div>
           </div>
         </div>
