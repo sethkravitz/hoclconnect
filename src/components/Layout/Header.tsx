@@ -8,8 +8,8 @@ const Header = () => {
   const location = useLocation()
 
   const navigation = [
-    { name: 'Get Bulk HOCl', href: '/bulk-hocl' },
-    { name: 'Private Label', href: '/private-label' },
+    { name: 'Get Bulk HOCl', href: '/bulk-hocl/' },
+    { name: 'Private Label', href: '/private-label-hocl/' },
     { name: 'How It Works', href: '/how-it-works' },
     { name: 'FAQ', href: '/faq' },
     { name: 'About', href: '/about' },
@@ -67,9 +67,9 @@ const Header = () => {
           {/* Medium screens - condensed nav */}
           <div className="hidden md:flex lg:hidden items-center space-x-1">
             <Link
-              to="/bulk-hocl"
+              to="/bulk-hocl/"
               className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                isActive('/bulk-hocl')
+                isActive('/bulk-hocl/')
                   ? 'text-blue-600 bg-blue-50'
                   : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
               }`}
@@ -77,9 +77,9 @@ const Header = () => {
               Get Bulk HOCl
             </Link>
             <Link
-              to="/private-label"
+              to="/private-label-hocl/"
               className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                isActive('/private-label')
+                isActive('/private-label-hocl/')
                   ? 'text-blue-600 bg-blue-50'
                   : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
               }`}

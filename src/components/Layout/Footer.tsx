@@ -38,12 +38,12 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/bulk-hocl" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/bulk-hocl/" className="text-gray-300 hover:text-white transition-colors">
                   Get Bulk HOCl
                 </Link>
               </li>
               <li>
-                <Link to="/private-label" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/private-label-hocl/" className="text-gray-300 hover:text-white transition-colors">
                   Launch My Own HOCl Product
                 </Link>
               </li>
@@ -94,6 +94,9 @@ const Footer = () => {
               <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Terms of Service
               </Link>
+              <a href="/sitemap.xml" className="text-gray-400 hover:text-white text-sm transition-colors">
+                Sitemap
+              </a>
             </div>
           </div>
         </div>
