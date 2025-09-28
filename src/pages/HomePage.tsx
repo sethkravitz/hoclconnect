@@ -1,9 +1,7 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Shield, Users, Clock, CheckCircle, Droplets, Building2, Factory, Beaker } from 'lucide-react'
+import { ArrowRight, Shield, Users, Clock, CheckCircle, Droplets, Building2, Beaker } from 'lucide-react'
 import { trackEvent } from '../lib/analytics'
 import MetaTags from '../components/SEO/MetaTags'
-import Card from '../components/UI/Card'
 import FAQList from '../components/FAQ/FAQList'
 import { ORGANIZATION_SCHEMA } from '../constants/seo'
 
