@@ -127,7 +127,7 @@ const HomePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex justify-center mb-6">
-              <Droplets className="h-16 w-16 text-blue-200" />
+              <Droplets className="h-16 w-16 text-blue-200" aria-hidden="true" />
             </div>
             <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               Launch Your HOCl Product:
@@ -141,8 +141,8 @@ const HomePage = () => {
             {/* Primary CTAs */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-8">
               <Link
-                to="/bulk-hocl"
-                onClick={() => handleCTAClick('Get Bulk HOCl Liquid', '/bulk-hocl')}
+                to="/bulk-hocl/"
+                onClick={() => handleCTAClick('Get Bulk HOCl Liquid', '/bulk-hocl/')}
                 className="bg-white text-blue-700 px-8 py-6 rounded-lg font-semibold hover:bg-blue-50 transition-colors flex items-center justify-center space-x-3 group text-lg"
               >
                 <Building2 className="h-5 w-5" />
@@ -150,8 +150,8 @@ const HomePage = () => {
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="/private-label"
-                onClick={() => handleCTAClick('Launch My Own HOCl Product', '/private-label')}
+                to="/private-label-hocl/"
+                onClick={() => handleCTAClick('Launch My Own HOCl Product', '/private-label-hocl/')}
                 className="bg-blue-500 text-white px-8 py-6 rounded-lg font-semibold hover:bg-blue-400 transition-colors flex items-center justify-center space-x-3 group border-2 border-blue-400 text-lg"
               >
                 <Beaker className="h-5 w-5" />
