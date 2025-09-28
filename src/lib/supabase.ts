@@ -1,19 +1,10 @@
-import { createClient } from '@supabase/supabase-js'
+// Legacy Supabase file - no longer used
+// The application now uses Replit Database with PostgreSQL
+// This file is kept for reference but should be removed in the future
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
+console.warn('Supabase is no longer used - this file should be removed')
 
-// Create a mock client if environment variables are not set
-export const supabase = supabaseUrl && supabaseAnonKey 
-  ? createClient(supabaseUrl, supabaseAnonKey)
-  : {
-      from: () => ({
-        select: () => Promise.resolve({ data: [], error: null }),
-        insert: () => Promise.resolve({ data: null, error: { message: 'Supabase not configured' } }),
-        update: () => Promise.resolve({ data: null, error: { message: 'Supabase not configured' } }),
-        delete: () => Promise.resolve({ data: null, error: { message: 'Supabase not configured' } })
-      })
-    } as any
+export const supabase = null
 
 export type Database = {
   public: {

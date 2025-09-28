@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useSearchParams, useNavigate } from 'react-router-dom'
-import { ChevronLeft, ChevronRight, CheckCircle, Package, Beaker, HelpCircle, Timer, Droplets, Building2, Factory, SprayCan as Spray } from 'lucide-react'
-import { supabase } from '../../lib/supabase'
+import { ChevronLeft, ChevronRight, CheckCircle, Package, Beaker, HelpCircle, Timer, Droplets, Building2, SprayCan as Spray } from 'lucide-react'
 import { useToast } from '../../hooks/useToast'
 import { useUtmParams } from '../../hooks/useUtmParams'
 import { trackEvent } from '../../lib/analytics'
@@ -49,7 +48,7 @@ const IntakeForm = () => {
   const [hasStarted, setHasStarted] = useState(false)
 
   // Initialize path from query params
-  React.useEffect(() => {
+  useEffect(() => {
     const pathParam = searchParams.get('path')
     const useParam = searchParams.get('use')
     const categoryParam = searchParams.get('category')
@@ -207,21 +206,44 @@ const IntakeForm = () => {
       }
       localStorage.setItem('lastSubmittedLead', JSON.stringify(leadSummary))
 
-      const { error } = await supabase
-        .from('leads')
-        .insert([{
-          intent,
-          industry,
-          company_name: formData.company || null,
-          contact_name: formData.contact_name!,
-          contact_email: formData.email!,
-          contact_phone: formData.phone || null,
-          requirements,
-          notes: formData.notes || null,
-          status: 'new'
-        }])
+      // Submit to the new API endpoint
+      const leadData = {
+        intent,
+        industry,
+        company: formData.company || null,
+        contactName: formData.contact_name!,
+        email: formData.email!,
+        phone: formData.phone || null,
+        notes: formData.notes || null,
+        // Map form fields to database schema
+        amountBand: formData.amount_band,
+        cadence: formData.cadence,
+        timeline: formData.timeline,
+        strengthChoice: null, // Not collected in this form
+        format: formData.bulk_format_pref,
+        packagingGoal: formData.pl_scope,
+        ackPurity: true, // Assuming acknowledgment of purity
+        companionInterest: false, // Not collected in this form
+        regionPref: formData.region_pref,
+        experienceLevel: null, // Not collected in this form
+        unknownFields: formData.unknown_fields,
+        score,
+        status: 'new'
+      }
 
-      if (error) throw error
+      const response = await fetch('/api/leads', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(leadData)
+      })
+
+      const result = await response.json()
+
+      if (!response.ok) {
+        throw new Error(result.message || 'Failed to submit lead')
+      }
 
       // Track successful submission
       trackEvent('lead_submitted', {
