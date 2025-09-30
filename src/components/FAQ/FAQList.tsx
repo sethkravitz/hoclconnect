@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 
 interface FAQItem {
@@ -71,15 +71,18 @@ const FAQList = ({ faqs, title = "Frequently Asked Questions", showCategories = 
                   {category} Questions
                 </h3>
                 <div className="space-y-4">
-                  {getFAQsByCategory(category).map((faq, index) => (
-                    <FAQItem
-                      key={index}
-                      faq={faq}
-                      index={index}
-                      isOpen={openItems.includes(index)}
-                      onToggle={() => toggleItem(index)}
-                    />
-                  ))}
+                  {getFAQsByCategory(category).map((faq) => {
+                    const globalIndex = faqs.indexOf(faq)
+                    return (
+                      <FAQItem
+                        key={globalIndex}
+                        faq={faq}
+                        index={globalIndex}
+                        isOpen={openItems.includes(globalIndex)}
+                        onToggle={() => toggleItem(globalIndex)}
+                      />
+                    )
+                  })}
                 </div>
               </div>
             ))}

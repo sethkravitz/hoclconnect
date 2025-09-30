@@ -1,4 +1,3 @@
-import React from 'react'
 import MetaTags from '../components/SEO/MetaTags'
 import Breadcrumbs from '../components/Layout/Breadcrumbs'
 import FAQList from '../components/FAQ/FAQList'
