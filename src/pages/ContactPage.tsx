@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react'
+import { useState } from 'react'
+import { Mail, MapPin, Clock, Send } from 'lucide-react'
 import MetaTags from '../components/SEO/MetaTags'
 import Breadcrumbs from '../components/Layout/Breadcrumbs'
 import Card from '../components/UI/Card'
@@ -96,14 +96,6 @@ const ContactPage = () => {
                       <div>
                         <p className="font-medium text-gray-900">Email</p>
                         <p className="text-gray-600">hello@hoclconnect.com</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center space-x-3">
-                      <Phone className="h-5 w-5 text-blue-600" />
-                      <div>
-                        <p className="font-medium text-gray-900">Phone</p>
-                        <p className="text-gray-600">1-555-HOCL-123</p>
                       </div>
                     </div>
                     
