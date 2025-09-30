@@ -40,7 +40,7 @@ const RouteTracker = () => {
     const path = location.pathname
     
     // Define pillar pages
-    const pillarPages = ['/bulk-hocl', '/private-label', '/how-it-works']
+    const pillarPages = ['/bulk-hocl/', '/private-label-hocl/', '/how-it-works']
     
     // Define educational pages
     const eduPages = [
@@ -75,8 +75,8 @@ function App() {
             <main className="flex-grow">
               <Routes>
                 <Route path="/" element={<HomePage />} />
-                <Route path="/bulk-hocl" element={<BulkHOClPage />} />
-                <Route path="/private-label" element={<PrivateLabelPage />} />
+                <Route path="/bulk-hocl/" element={<BulkHOClPage />} />
+                <Route path="/private-label-hocl/" element={<PrivateLabelPage />} />
                 <Route path="/how-it-works" element={<HowItWorksPage />} />
                 
                 {/* Container pages */}
